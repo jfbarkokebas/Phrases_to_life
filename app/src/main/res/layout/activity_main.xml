@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/purple_500"
+        >
+
+        <ImageView
+            android:id="@+id/image_cookie"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="6dp"
+            android:src="@drawable/ic_baseline_cookie_24" />
+
+        <ImageView
+            android:id="@+id/image_sad"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="6dp"
+            android:background="@color/purple_500"
+            android:src="@drawable/ic_baseline_sentiment_very_dissatisfied_24" />
+
+        <ImageView
+            android:id="@+id/image_warning"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="6dp"
+            android:background="@color/purple_500"
+            android:src="@drawable/ic_baseline_warning_24" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_hello"
+        android:text="@string/app_hello"
+        android:textSize="22sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/edit_phrase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:textSize="24sp"
+        android:text="@string/app_name"/>
+
+    <Button
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_new_phrase"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="256dp"
+        android:layout_marginBottom="32dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

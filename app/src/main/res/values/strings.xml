@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ActivityLife</string>
+    <string name="app_hello">Olá!</string>
+    <string name="app_new_phrase">Nova Frase</string>
+    <string name="app_put_name">Digite seu nome</string>
+    <string name="app_save">SALVAR</string>
+
+
+
+</resources>
