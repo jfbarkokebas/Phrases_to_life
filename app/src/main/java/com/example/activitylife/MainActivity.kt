@@ -13,5 +13,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val name = DataShared(this).getData("USER_NAME")
+        binding.textHello.text = "Olá ${name}!"
     }
 }
