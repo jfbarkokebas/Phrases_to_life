@@ -1,4 +1,4 @@
-package com.example.activitylife
+package com.example.activitylife.infra
 
 import android.content.Context
 import android.content.SharedPreferences
