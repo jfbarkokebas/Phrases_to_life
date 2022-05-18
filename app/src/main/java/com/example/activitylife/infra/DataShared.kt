@@ -13,7 +13,7 @@ class DataShared(context: Context) {
     }
 
     fun getData(key: String):String{
-        return data.getString(key, "não encontrado")?: ""
+        return data.getString(key, "")?: ""
     }
 
 }
