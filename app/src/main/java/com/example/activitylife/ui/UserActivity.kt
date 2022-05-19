@@ -26,7 +26,7 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         binding.buttonSave.setOnClickListener(this)
 
 
-        verifyUserActivity()
+
 
 
     }
@@ -37,15 +37,7 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
             handleSave()
         }
     }
-    //verificando se os dados ja foram inseridos
 
-    fun verifyUserActivity(){
-        val name = DataShared(this).getData(AppConstants.KEY.USER_NAME)
-        if(name != ""){
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
-        }
-    }
 
     //TRATANDO OS DADOS DO CLICK
     fun handleSave(){
@@ -53,8 +45,7 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         if(name != ""){
             //salvar no shared preferences
             DataShared(this).setData(AppConstants.KEY.USER_NAME, name)
-            //passar p outra activity
-            startActivity(Intent(this, MainActivity::class.java))
+
             finish()
 
         }else{

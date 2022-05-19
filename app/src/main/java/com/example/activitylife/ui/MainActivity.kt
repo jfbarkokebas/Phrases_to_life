@@ -1,5 +1,6 @@
 package com.example.activitylife.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -30,10 +31,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         handleFilter(R.id.image_cookie)
 
         //criação dos eventos
-        binding.imageCookie.setOnClickListener(this)
-        binding.imageSad.setOnClickListener(this)
-        binding.imageWarning.setOnClickListener(this)
-        binding.btnNewPhrase.setOnClickListener(this)
+        setEvents()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        handleUserName()
     }
 
     override fun onClick(view: View) {
@@ -41,10 +44,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
            binding.editPhrase.text = Mock().getPhrase(categoryId)
        }else if (view.id in listOf(R.id.image_cookie, R.id.image_sad, R.id.image_warning)){
            handleFilter(view.id)
+       }else if(view.id == R.id.text_hello){
+           startActivity(Intent(this, UserActivity::class.java))
+       }else if(view.id == R.id.image_menu){
+           startActivity(Intent(this, MenuActivity::class.java))
        }
     }
 
-
+    private fun setEvents(){
+        binding.imageMenu.setOnClickListener(this)
+        binding.textHello.setOnClickListener(this)
+        binding.imageCookie.setOnClickListener(this)
+        binding.imageSad.setOnClickListener(this)
+        binding.imageWarning.setOnClickListener(this)
+        binding.btnNewPhrase.setOnClickListener(this)
+    }
 
     private fun handleFilter(id:Int){
         binding.imageCookie.setColorFilter(ContextCompat.getColor(this, R.color.dark_purple))

@@ -19,7 +19,7 @@
             android:id="@+id/image_cookie"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:layout_marginTop="8dp"
             android:paddingBottom="6dp"
             app:tint="@color/dark_purple"
@@ -30,7 +30,7 @@
             android:id="@+id/image_sad"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:layout_marginTop="8dp"
             android:paddingBottom="6dp"
             app:tint="@color/dark_purple"
@@ -41,26 +41,36 @@
             android:id="@+id/image_warning"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:layout_marginTop="8dp"
             android:paddingBottom="6dp"
             app:tint="@color/dark_purple"
             android:background="@color/soft_purple"
             android:src="@drawable/ic_baseline_warning_24" />
+        <ImageView
+            android:id="@+id/image_menu"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="6dp"
+            app:tint="@color/dark_purple"
+            android:background="@color/soft_purple"
+            android:src="@drawable/ic_baseline_more_vert_24"/>
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/text_hello"
-        android:text="@string/app_hello"
-        android:textSize="22sp"
-        android:fontFamily="@font/cabin"
-        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/linear_layout"
         android:layout_marginTop="32dp"
-        android:gravity="center_horizontal"/>
+        android:fontFamily="@font/cabin"
+        android:gravity="center_horizontal"
+        android:text="@string/app_hello"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
 
     <TextView
         android:id="@+id/edit_phrase"
