@@ -1,4 +1,4 @@
-package com.example.activitylife.ui
+package com.example.activitylife.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

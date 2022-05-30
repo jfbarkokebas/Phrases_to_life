@@ -1,10 +1,9 @@
-package com.example.activitylife.ui
+package com.example.activitylife.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.activitylife.infra.AppConstants
 import com.example.activitylife.infra.DataShared
@@ -12,22 +11,22 @@ import com.example.activitylife.R
 import com.example.activitylife.dataPhrases.Mock
 import com.example.activitylife.databinding.ActivityMainBinding
 
+
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
     var categoryId = AppConstants.CATEGORY.COOKIE
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //esconder a supportActionBar
         supportActionBar?.hide()
 
         //pegar o nome no SharedPreferences e lançar na tela
-        handleUserName()
-        //fingir que clicou para ja deixar selecionado o btn cookie
+        sharedName()
         handleFilter(R.id.image_cookie)
 
         //criação dos eventos
@@ -36,7 +35,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onResume() {
         super.onResume()
-        handleUserName()
+        sharedName()
     }
 
     override fun onClick(view: View) {
@@ -87,7 +86,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    private fun handleUserName(){
+    private fun sharedName(){
         val name = DataShared(this).getData(AppConstants.KEY.USER_NAME)
         binding.textHello.text = "Olá ${name}!"
     }
